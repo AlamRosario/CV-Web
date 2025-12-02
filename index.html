@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Alam Rosario Sánchez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* 🛑 CORRECCIONES DE IMPRESIÓN (PDF) DEFINITIVAS 🛑 */
+        @media print {
+            @page { 
+                margin: 0; 
+                size: auto; 
+            }
+            
+            body { 
+                /* 1. Pintamos toda la HOJA (no solo el contenido) */
+                background: linear-gradient(to right, #0f172a 33.3%, white 33.3%) !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                min-height: 100vh;
+                margin: 0;
+            }
+
+            /* 2. Hacemos el contenedor transparente para que se vea el fondo del body */
+            .container { 
+                width: 100% !important; 
+                max-width: none !important; 
+                margin: 0 !important; 
+                padding: 0 !important; 
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                background: transparent !important; 
+                display: flex !important; 
+                flex-direction: row !important;
+            }
+
+            /* 3. Ajustamos anchos exactos para coincidir con el fondo */
+            aside { 
+                width: 33.3% !important; 
+                background: transparent !important; 
+                color: white !important;
+                padding-left: 2rem !important; /* Un poco más de margen al imprimir */
+            }
+
+            main { 
+                width: 66.7% !important; 
+                background: transparent !important;
+                padding-right: 2rem !important;
+            }
+
+            /* Evitar cortes feos en textos */
+            section, .mb-8, li, p, h1, h2, h3 {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            
+            /* Ocultar elementos de UI */
+            .no-print { display: none !important; }
+            
+            /* Ajuste de fuentes para impresión más nítida */
+            body { font-size: 11pt; }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 py-8 min-h-screen">
+
+    <div id="cv-container" class="container mx-auto max-w-5xl bg-white shadow-xl rounded-lg overflow-hidden flex flex-col md:flex-row">
+        
+        <!-- SIDEBAR (IZQUIERDA) - Ancho ajustado a 1/3 exacto para coincidir con impresión -->
+        <aside class="w-full md:w-1/3 bg-slate-900 text-white p-8 flex flex-col">
+            
+            <!-- FOTO DE PERFIL -->
+            <div class="mb-8 flex justify-center">
+                <div class="w-40 h-40 rounded-full bg-slate-700 border-4 border-slate-500 overflow-hidden relative group cursor-pointer">
+                    <!-- 🛑 FOTO DE PERFIL AQUÍ 👇 -->
+                    <img src="foto de perfil 1.jpg" 
+                         alt="Alam Rosario" 
+                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                         onerror="this.src='https://ui-avatars.com/api/?name=Alam+Rosario&background=random&size=200'">
+                </div>
+            </div>
+
+            <!-- CONTACTO -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold uppercase tracking-widest border-b border-slate-600 pb-2 mb-4">Contacto</h3>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-envelope w-4 text-center text-blue-400"></i>
+                        <span>alamsanchez05@gmail.com</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone w-4 text-center text-blue-400"></i>
+                        <span>829-927-3441</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-map-marker-alt w-4 text-center text-blue-400"></i>
+                        <span>Santo Domingo Este, RD</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fab fa-github w-4 text-center text-blue-400"></i>
+                        <a href="https://github.com/AlamRosario" class="hover:text-white transition">github.com/AlamRosario</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- HABILIDADES -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold uppercase tracking-widest border-b border-slate-600 pb-2 mb-4">Habilidades</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-700 rounded-full text-xs">HTML5 / CSS3</span>
+                    <span class="px-3 py-1 bg-slate-700 rounded-full text-xs">JavaScript</span>
+                    <span class="px-3 py-1 bg-slate-700 rounded-full text-xs">MySQL (Básico)</span>
+                    <span class="px-3 py-1 bg-slate-700 rounded-full text-xs">Git / GitHub</span>
+                    <span class="px-3 py-1 bg-slate-700 rounded-full text-xs">Seguridad Informática</span>
+                    <span class="px-3 py-1 bg-slate-700 rounded-full text-xs">Redes y SO</span>
+                    <span class="px-3 py-1 bg-slate-700 rounded-full text-xs">Atención al Cliente</span>
+                    <span class="px-3 py-1 bg-slate-700 rounded-full text-xs">Microsoft Office</span>
+                </div>
+            </div>
+
+            <!-- IDIOMAS -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold uppercase tracking-widest border-b border-slate-600 pb-2 mb-4">Idiomas</h3>
+                <div class="space-y-3 text-sm">
+                    <div>
+                        <div class="flex justify-between text-slate-300 mb-1">
+                            <span>Español</span>
+                            <span>Nativo</span>
+                        </div>
+                        <div class="w-full bg-slate-700 h-1.5 rounded-full">
+                            <div class="bg-blue-500 h-1.5 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-slate-300 mb-1">
+                            <span>Inglés</span>
+                            <span>Intermedio</span>
+                        </div>
+                        <div class="w-full bg-slate-700 h-1.5 rounded-full">
+                            <div class="bg-blue-500 h-1.5 rounded-full" style="width: 60%"></div>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Universidad APEC</p>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT (DERECHA) -->
+        <main class="w-full md:w-2/3 p-8 md:p-12">
+            
+            <!-- HEADER -->
+            <div class="mb-10">
+                <h1 class="text-4xl font-bold text-slate-800 mb-2">Alam Rosario Sánchez</h1>
+                <h2 class="text-xl text-blue-600 font-medium">Ingeniero en Sistemas de Computación (Estudiante)</h2>
+            </div>
+
+            <!-- PERFIL -->
+            <section class="mb-10">
+                <h3 class="text-xl font-bold uppercase text-slate-700 border-b-2 border-blue-500 inline-block mb-4 pb-1">Perfil Profesional</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                    Estudiante avanzado de Ingeniería en Sistemas de Computación con una sólida base en procesos administrativos, incluyendo 
+                    <strong class="text-slate-800">gestión de datos</strong>, <strong class="text-slate-800">atención al cliente</strong> y dominio de 
+                    <strong class="text-slate-800">Google WorkSpace</strong>. Destaco en adaptabilidad, organización y resolución de problemas. 
+                    Técnicamente competente en <strong class="text-slate-800">desarrollo web front-end</strong> y fundamentos de redes. 
+                    Busco aplicar mis conocimientos en un entorno profesional de alto rendimiento.
+                </p>
+            </section>
+
+            <!-- EXPERIENCIA -->
+            <section class="mb-10">
+                <h3 class="text-xl font-bold uppercase text-slate-700 border-b-2 border-blue-500 inline-block mb-6 pb-1">Experiencia Profesional</h3>
+                
+                <div class="border-l-2 border-slate-200 pl-6 pb-6 relative">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-white"></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-lg text-slate-800">Soporte Administrativo y Técnico / Asistente Contable</h4>
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Mar 2022 - Actualidad</span>
+                    </div>
+                    <p class="text-blue-600 text-sm font-semibold mb-2">Cooperativa COOPEMAO (Servicios Prestados)</p>
+                    <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+                        <li>Gestión del módulo de inventario y cuentas por pagar usando un sistema contable interno.</li>
+                        <li>Responsable del registro y digitación de datos.</li>
+                        <li>Proporcioné atención al cliente de forma efectiva.</li>
+                        <li>Soporte técnico en sistemas informáticos.</li>
+                    </ul>
+                </div>
+
+                <div class="border-l-2 border-slate-200 pl-6 relative">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-lg text-slate-800">Desarrollador Web Junior</h4>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">Ene 2025</span>
+                    </div>
+                    <p class="text-blue-600 text-sm font-semibold mb-2">Freelance</p>
+                    <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+                        <li>Diseño y desarrollo responsive con <strong>HTML5, CSS3 y JavaScript</strong>.</li>
+                        <li>Implementación de formularios de contacto con base de datos.</li>
+                        <li>Optimización de UX/UI.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- CERTIFICADOS -->
+            <section class="mb-10 bg-blue-50 rounded-xl p-6 border border-blue-100">
+                <h3 class="text-xl font-bold uppercase text-slate-700 border-b-2 border-blue-500 inline-block mb-6 pb-1">
+                    <i class="fas fa-certificate mr-2"></i>Certificados
+                </h3>
+                
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- CERTIFICADO 1 -->
+                    <!-- 🛑 CAMBIAR ARCHIVO AQUÍ 👇 -->
+                    <a href="https://raw.githubusercontent.com/AlamRosario/certificados/main/FullStack.pdf" target="_blank" class="group flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition border border-slate-200 cursor-pointer">
+                        <div class="bg-red-100 text-red-500 p-3 rounded-lg mr-4 group-hover:bg-red-500 group-hover:text-white transition">
+                            <i class="fas fa-file-pdf text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h5 class="font-bold text-slate-800 text-sm group-hover:text-blue-600 transition">The Complete Full-Stack Web Development Bootcamp</h5>
+                            <p class="text-xs text-slate-500">Udemy - Dr. Angela Yu (Nov 2025)</p>
+                        </div>
+                        <div class="text-slate-400 group-hover:text-blue-600">
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </a>
+
+                    <!-- CERTIFICADO 2 -->
+                    <!-- 🛑 CAMBIAR ARCHIVO AQUÍ 👇 -->
+                    <a href="https://raw.githubusercontent.com/AlamRosario/certificados/main/Estrategia.pdf" target="_blank" class="group flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition border border-slate-200 cursor-pointer">
+                        <div class="bg-red-100 text-red-500 p-3 rounded-lg mr-4 group-hover:bg-red-500 group-hover:text-white transition">
+                            <i class="fas fa-file-pdf text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h5 class="font-bold text-slate-800 text-sm group-hover:text-blue-600 transition">Administración Estratégica y Emprendedora</h5>
+                            <p class="text-xs text-slate-500">Univ. of New Mexico - Coursera (Jul 2025)</p>
+                        </div>
+                        <div class="text-slate-400 group-hover:text-blue-600">
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </a>
+
+                    <!-- CERTIFICADO 3 -->
+                    <!-- 🛑 CAMBIAR ARCHIVO AQUÍ 👇 -->
+                    <a href="https://raw.githubusercontent.com/AlamRosario/certificados/main/SoporteTécnico.pdf" target="_blank" class="group flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition border border-slate-200 cursor-pointer">
+                        <div class="bg-red-100 text-red-500 p-3 rounded-lg mr-4 group-hover:bg-red-500 group-hover:text-white transition">
+                            <i class="fas fa-file-pdf text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h5 class="font-bold text-slate-800 text-sm group-hover:text-blue-600 transition">Aspectos básicos de la asistencia técnica</h5>
+                            <p class="text-xs text-slate-500">Google - Coursera (Sep 2023)</p>
+                        </div>
+                        <div class="text-slate-400 group-hover:text-blue-600">
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </a>
+                </div>
+                <p class="text-xs text-slate-400 mt-4 text-center italic">* Haz clic para descargar o visualizar los documentos adjuntos.</p>
+            </section>
+
+            <!-- PROYECTOS & EDUCACIÓN -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <section>
+                    <h3 class="text-lg font-bold uppercase text-slate-700 border-b-2 border-blue-500 inline-block mb-4 pb-1">Educación</h3>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-800">Ingeniería en Sistemas</h4>
+                        <p class="text-xs text-blue-600 mb-1">Universidad APEC</p>
+                        <p class="text-xs text-slate-500">2021 - Presente (10° Cuatrimestre)</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold uppercase text-slate-700 border-b-2 border-blue-500 inline-block mb-4 pb-1">Proyectos</h3>
+                    <ul class="space-y-3">
+                        <li class="bg-slate-50 p-3 rounded border border-slate-100">
+                            <h4 class="font-bold text-sm text-slate-800">Web COOPEMAO (En Proceso)</h4>
+                            <p class="text-xs text-slate-600 mt-1">Sitio informativo completo con historia, servicios y contacto.</p>
+                        </li>
+                        <li class="bg-slate-50 p-3 rounded border border-slate-100">
+                            <h4 class="font-bold text-sm text-slate-800">Algoritmos JS</h4>
+                            <p class="text-xs text-slate-600 mt-1">Adivinanza, Palíndromos y Torres de Hanoi.</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- BOTÓN DE IMPRESIÓN FLOTANTE -->
+    <div class="fixed bottom-8 right-8 no-print">
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:-translate-y-1 flex items-center gap-2">
+            <i class="fas fa-print"></i> Guardar como PDF
+        </button>
+    </div>
+
+</body>
+</html>
